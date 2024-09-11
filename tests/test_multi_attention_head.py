@@ -3,7 +3,7 @@ import pytest
 from transformers import AutoConfig
 from multi_head_attention import (
     MultiHeadAttention,
-)  # Adjust based on your file structure
+)
 
 
 @pytest.mark.parametrize(
