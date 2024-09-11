@@ -1,7 +1,7 @@
 import torch
 import pytest
 from transformers import AutoConfig
-from feed_forward import FeedForward  # Adjust based on your file structure
+from feed_forward import FeedForward
 
 
 @pytest.mark.parametrize(
