@@ -8,7 +8,7 @@ class FeedForward(nn.Module):
     Implements a feed-forward neural network with two linear layers, GELU activation, and dropout.
 
     Args:
-            - config (transformers.PretrainedConfig): A configuration object from the Hugging Face transformers library.
+        config (transformers.PretrainedConfig): A configuration object from the Hugging Face transformers library.
             - hidden_size (int): The size of the input and output hidden states.
             - intermediate_size (int): The size of the intermediate layer.
             - hidden_dropout_prob (float): Dropout probability for the dropout layer.
