@@ -6,7 +6,11 @@ from feed_forward import FeedForward  # Adjust based on your file structure
 
 @pytest.mark.parametrize(
     "batch_size, seq_len, model_ckpt",
-    [(2, 10, "bert-base-uncased"), (4, 20, "distilbert-base-uncased")],
+    [
+        (2, 10, "bert-base-uncased"),  # Test case 1: BERT-base
+        (4, 20, "bert-large-uncased"),  # Test case 2: BERT-large
+        (1, 5, "bert-base-uncased"),  # Test case 3: Smaller input with BERT-base
+    ],
 )
 def test_feed_forward_output_size(batch_size, seq_len, model_ckpt):
     # Load the configuration from the specified pretrained checkpoint
