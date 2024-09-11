@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from transformers import AutoConfig
 from attention_head import AttentionHead
 
 class MultiHeadAttention(nn.Module):
@@ -7,9 +8,9 @@ class MultiHeadAttention(nn.Module):
     Implements multi-head attention by utilizing several attention heads and combining their outputs.
 
     Args:
-        config (object): Configuration object containing attributes `hidden_size` (int) and `num_attention_heads` (int).
+        - config (transformers.PretrainedConfig): A configuration object from the Hugging Face transformers library.
     """
-    def __init__(self, config: object):
+    def __init__(self, config: AutoConfig):
         super().__init__()
         
         embed_dim = config.hidden_size
